@@ -18,10 +18,10 @@ if [ ! -d "$repo/.git" ] && ! git -C "$repo" rev-parse --git-dir >/dev/null 2>&1
 fi
 repo=$(git -C "$repo" rev-parse --show-toplevel) || exit 2
 
-# Allowed identity: the author the scanned repository commits as, read from its own git configuration,
-# so the script carries no name or address of its own.
-allowed_name=$(git -C "$repo" config user.name)
-allowed_mail=$(git -C "$repo" config user.email)
+# Allowed identity: the owner, read from the global git configuration (a repository may commit under a
+# neutral identity of its own), so the script carries no name or address of its own.
+allowed_name=$(git config --global user.name)
+allowed_mail=$(git config --global user.email)
 allowed_mail_re="^$(printf '%s' "$allowed_mail" | sed 's/[.[\*^$]/\\&/g')\$"
 
 # Generic patterns. They describe a shape, never a real value.
