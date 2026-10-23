@@ -35,15 +35,17 @@
 - **Agency (에이전시)** — the service that supplies, places, carries and ends agent sessions, of every
   role and every model, under the limits each provider and tier is given.
 - **Agent (에이전트)** — in ordinary use, any AI agent of the system, BMO and the workers included.
-- **Chat agent (챗 에이전트)** — an agent that answers people in rooms, in a persona of its own. Chat
-  agents are added and removed by registration alone: no unit keeps a list of them, and adding one
-  changes nothing elsewhere. BMO is one of them, and the first.
-- **BMO (비모)** — the system's own chat agent: the one that relays work, directing it to be done
-  through the workers, and the one a room falls to when it designates no agent.
-- **Designated agent (지정된 에이전트)** — a chat agent a room names to answer in it. A room may
-  designate any number, and each answers there by its own wake.
-- **Companion (대화 상대)** — a designated agent other than BMO. It is neither a gate nor a worker.
-- **Worker (워커)** — a general agent that can work inside one particular checkout.
+- **Chat agent (챗 에이전트)** — an agent that answers people in rooms, in a persona of its own, and relays
+  work, directing it to be done through the workers. Every chat agent holds the supervisor role, and all
+  supervisors are equal: what one may do, every one may do. Chat agents are added and removed by
+  registration alone: no unit keeps a list of them, and adding one changes nothing elsewhere.
+- **BMO (비모)** — the first chat agent of a deployment, one supervisor among equals, and the one a room
+  falls to where its registration names no other.
+- **Designated agent (지정된 에이전트)** — a chat agent a room names to answer in it. A room may designate
+  any number, and each answers there by its own wake. No unit treats one chat agent apart from another by
+  name.
+- **Worker (워커)** — a general agent that can work inside one particular checkout, directed by a chat
+  agent.
 - **Co-worker (코워커)** — a sub-agent for a worker's use only, which a worker is assigned out of the
   co-worker pool.
 - **User (사용자)** — a person with an account of their own on the system. The owner is the first user
@@ -111,13 +113,13 @@ name of the provider or the agent.
 
 - **The TODO is a service that stores and serves, and never executes.** Items, their questions and
   replies, the queues they wait in and the leases on them are its whole business.
-- **BMO turns every ordinary request into an item** and directs a worker to do it. Without an explicit
-  instruction to do it directly, BMO uses the TODO. When the owner tells BMO to do something itself,
-  BMO may do it directly. For a change to the BMO system itself this is absolute: such a change goes
-  through the TODO.
-- **A worker takes work from the TODO,** pushed by a subscription or pulled by a lease, works inside
-  the one checkout its item names, closes the item with what it did, and the receiver wakes BMO when
-  the job ends.
+- **A chat agent turns every ordinary request into an item** and directs a worker to do it. Without an
+  explicit instruction to do it directly, it uses the TODO. When the owner tells it to do something itself,
+  it may do it directly. For a change to the BMO system itself this is absolute: such a change goes through
+  the TODO.
+- **A worker takes work from the TODO,** pushed by a subscription or pulled by a lease, works inside the
+  one checkout its item names, closes the item with what it did, and the receiver wakes the chat agent that
+  filed it when the job ends.
 - **Workers and co-workers are sessions the agency supplies,** placed where the co-worker pool allows,
   reading the skills the content units place for them.
 
@@ -152,11 +154,10 @@ name of the provider or the agent.
 
 ## When a designated agent wakes
 
-- The receiver recognises a designated agent's name mechanically and passes the message to that
-  agent: BMO's name, and the other words that mean BMO, to the gate; a companion's name to the
-  companion.
-- Apart from that, a message in a chat room never wakes a designated agent on its own. The exception
-  is BMO being woken by a tool or by a job's end.
+- The receiver recognises a designated agent's name mechanically, by the names its registration declares,
+  and passes the message to that agent through the gate.
+- Apart from that, a message in a chat room never wakes a designated agent on its own. The exception is an
+  agent woken by a tool or by the end of a job it filed.
 - Where a user talks with one designated agent alone, that agent answers whatever they say: in that
   user's private chat with it, and in a room that designates it alone.
 - A room that woke an agent keeps a window, for a set length of time, in which the conversation goes
