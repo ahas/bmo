@@ -4,6 +4,7 @@
 !/.gitignore
 !/README.md
 !/STRUCTURE.md
+!/docs/
 !/tools/
 /tools/*
 !/tools/privacy-scan/
