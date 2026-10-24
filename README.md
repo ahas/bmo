@@ -56,4 +56,5 @@ and a unit is cloned by its own name beside the others.
 | `services/word-chain` | bmo-word-chain | The word-chain game a room plays with its agent |
 | `tools/news` | bmo-news | The morning news edition, filed as a shared page |
 | `tools/stock-index` | bmo-stock-index | The daily closes of the Seoul and New York indices |
+| `tools/bmo-ear` | bmo-ear | The listening tool: a saved voice file answered as Korean text |
 | `tools/privacy-scan` | this repository | One script: the privacy scan of a checkout and its history |
