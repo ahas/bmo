@@ -133,6 +133,34 @@ name of the provider or the agent.
 - **A tool that needs the web, a document store, a market feed or any other upstream reaches it as a
   unit,** through that unit's documented API, never by its own copy.
 
+## No clock bounds
+
+- **Nothing is bounded by a clock.** No run, turn, call, synthesis, lease, seat or wait is stopped,
+  refused, abandoned or failed because a span of time has passed. Work ends when it finishes, when it
+  fails on its own, or when someone stops it.
+- **A wait waits for its event:** a process that ends, a connection that closes, a holder that gives
+  back, an answer that arrives. Where the event cannot be observed, what is missing is a way to observe
+  it, never a clock standing in for it.
+- **A request to another host waits for its answer.** Its end is the answer, a refused or broken
+  connection, or the other end gone; no request timeout cuts it short.
+- **Telling that the other end is gone is observing an event.** A transport's heartbeat (a keep-alive
+  probe, a stream's keep-alive line whose absence means the peer has dropped) detects a dead peer and is
+  kept; it never stands in for a bound on how long a live peer may take.
+- **A stop asked of a process waits for the process to end.** A polite stop is not escalated to a kill
+  after a grace period; a stop that must be immediate kills at once.
+- **A deployment is up when its health check answers ready,** not when it has stayed up for a span.
+- **Access and retention are not work.** A login's or a share link's lifetime, a grant's end, and how
+  long an abandoned upload is kept are ends of access or storage, and stand.
+- **A rule's own window is not a bound on work.** A game's recruiting window or a room's conversation
+  window is the rule itself, and a long poll that returns empty and is asked again only paces.
+- **What is bounded is how much runs at once, by count.** The co-worker pool bounds how many models of
+  each tier run at the same time; work beyond that waits in line for a place, however long that takes,
+  and is never turned away for having waited.
+- **A clock may pace, never end.** A schedule, a polling interval, a retry's back-off, or a notice that
+  something has been quiet says when to look again; none of them gives up on the work.
+- **A span someone else imposes** — a provider's cache lifetime, an upstream's own ceiling — is that
+  party's fact, read and worked around, and never copied into a bound of ours.
+
 ## Many agents, many users
 
 - **Any number of chat agents, each one across the whole system.** An agent has one session and one
