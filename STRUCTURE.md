@@ -36,9 +36,10 @@
   role and every model, under the limits each provider and tier is given.
 - **Agent (에이전트)** — in ordinary use, any AI agent of the system, BMO and the workers included.
 - **Chat agent (챗 에이전트)** — an agent that answers people in rooms, in a persona of its own, and relays
-  work, directing it to be done through the workers. Every chat agent holds the supervisor role, and all
-  supervisors are equal: what one may do, every one may do. Chat agents are added and removed by
-  registration alone: no unit keeps a list of them, and adding one changes nothing elsewhere.
+  work, directing it to be done through the workers. Every chat agent holds the supervisor role, and the
+  supervisors of one account are equal: what one may do, every one of that account may do. Chat agents
+  are added and removed by registration alone: no unit keeps a list of them, and adding one changes
+  nothing elsewhere.
 - **BMO (비모)** — the first chat agent of a deployment, one supervisor among equals, and the one a room
   falls to where its registration names no other.
 - **Designated agent (지정된 에이전트)** — a chat agent a room names to answer in it. A room may designate
@@ -48,8 +49,29 @@
   agent.
 - **Co-worker (코워커)** — a sub-agent for a worker's use only, which a worker is assigned out of the
   co-worker pool.
-- **User (사용자)** — a person with an account of their own on the system. The owner is the first user
-  and the platform's administrator.
+- **User (사용자)** — a person with an account of their own on the system, in exactly one organisation
+  unit of one company. The owner is the first user and the platform's superadmin, the one user who
+  reaches every company.
+- **Company (회사)** — the top unit of an organisation and the unit its data is isolated by. A
+  deployment holds any number of companies, and nothing of one is seen from another.
+- **Organisation unit (조직 단위)** — a folder in a company's tree below the company, of any depth. Every
+  unit is the same kind of thing: the words a company calls them by, such as division, centre, team or
+  part, are names only, and nothing reads a meaning into them. A unit is where a head's authority runs
+  and its members are organised, never a boundary of collaboration inside its company. Any unit may have
+  a head, and every head holds the same authority over their own unit and every unit below it: inviting
+  members, opening and changing projects, and granting, room by room, the right to call one's supervisor
+  into a group room. Each unit does its own kind of work, such as producing, inspecting another unit's
+  results or research. A person belongs to exactly one unit.
+- **Project (프로젝트)** — a body of work that belongs to one organisation unit or to one person. Every
+  user may open projects of their own. A project is public or private, and private until made public. A
+  unit's project gathers the public projects of the people and units below it, reading their summary
+  and state and their full record on request. A private project is read by its members alone, whoever
+  heads the units above it. A head above may add members to a unit's private project, and whoever is
+  added reads it as a member, every change of members shown to all of them; the members of a person's
+  own project are that person's alone to choose.
+- **Work relation (일의 관계)** — a link between two projects, such as a handover, an inspection, a
+  reference, a report or a change request. Work relations form a web of their own and never follow the
+  organisation's tree.
 - **Node (노드)** — a machine the system reaches: where an engine stands, where a card is lent, where a
   worker's checkout may be.
 
@@ -161,24 +183,51 @@ name of the provider or the agent.
 - **A span someone else imposes** — a provider's cache lifetime, an upstream's own ceiling — is that
   party's fact, read and worked around, and never copied into a bound of ours.
 
-## Many agents, many users
+## Accounts, companies and units
 
-- **Any number of chat agents, each one across the whole system.** An agent has one session and one
-  persona in every room and on every provider, so what a person said to it in a group room carries on
-  in that person's private chat with it. A new agent is a registration and its persona layers, never a
-  change to a provider, the receiver, the gate or the agency.
-- **Users are separated by account and by permission, never by an agent of their own.** A user is one
-  person across providers: each identity on a platform is linked to their one account, so what they
-  may do and what an agent knows of them follow the person. An identity linked to no account is an
-  ordinary member of the room it speaks in.
-- **What a user may have an agent do is granted by permission,** and nothing is open until the owner
-  opens it. A grant names exactly what it opens, may carry an end, and only the owner grants and
-  revokes.
-- **What is said in one room is not told in another,** with one exception: in their own private chat
+- **An account stands on its own.** Its roles, its agents and their settings, its sessions and the
+  count its pool bounds are its own. One account's sessions never take another account's place, and a
+  new account is a registration that changes nothing elsewhere.
+- **An account's sessions run only on the node its account is bound to.** By default that is the
+  person's own machine, proven by the node agent installed there; only the owner binds an account to
+  another node. An account whose node is not yet proven, or whose node is gone, cannot be used until a
+  node is proven again, and then carries on as it was.
+- **A user is one person across providers:** each identity on a platform is linked to their one
+  account, so what they may do and what an agent knows of them follow the person. An identity linked to
+  no account is an ordinary member of the room it speaks in.
+- **The company is the unit of isolation.** Projects, rooms, meeting records, memories, people and
+  search belong to one company, and nothing crosses from one company to another. The owner, as
+  superadmin, reaches every company.
+- **A shared engine serves every company and mixes none.** Every request to it carries its company and
+  its account; an account reads only its own requests and logs; sessions and caches of a shared engine
+  are never shared across companies.
+- **Inside a company, collaboration crosses units.** Anyone may be made a member of a project, a meeting
+  or a chat in their company, with no consent of their unit's head.
+- **Grants come from the owner, and a unit's head grants within their own unit and below.** The owner
+  places companies, their organisation units and people. The head of a unit invites members to it or to
+  a unit below it, opens and changes projects there, and grants a member the right to call their own
+  supervisor into a group room. That right is granted room by room, by the room's opener or the head of
+  the unit the room belongs to, as a person is invited or afterwards. What a user may have an agent do
+  is granted by permission, and nothing is open until it is granted; a grant names exactly what it opens
+  and may carry an end.
+- **Any number of chat agents, each one across its account's rooms.** An agent has one session and one
+  persona in every room of its company and on every provider, so what a person said to it in a group
+  room carries on in that person's private chat with it. A new agent is a registration and its persona
+  layers, never a change to a provider, the receiver, the gate or the agency.
+- **What is said in one room is not told in another,** with two exceptions: in their own private chat
   with an agent, a user may carry on what they and that agent said to each other in a group room they
-  are in. Only that user's own words and the agent's answers to them carry over.
-- **The console is where a user signs in,** where the accounts and grants stand, and where every
-  unit's screen is shown; the accounts are served to the other units, and no other unit keeps its own.
+  are in, only their own words and the agent's answers to them; and the record of a meeting is read by
+  the supervisors of its participants, each of whom tells its own user what the meeting decided for
+  them.
+- **A supervisor keeps its user's confidence.** What its user said to it alone never reaches another
+  user, a meeting record or a project, and a private project is never read from above. When a user
+  leaves their company their account is archived, and the head of the unit they belonged to reads what
+  of it was never private: their public projects, the meetings they took part in, their tasks and the
+  record of their work relations. Their private projects and what they said to their supervisor alone
+  stay sealed.
+- **The console is where a user signs in,** where the companies, their units, the accounts and the
+  grants stand, and where every unit's screen is shown; the accounts are served to the other units, and
+  no other unit keeps its own.
 
 ## When a designated agent wakes
 
@@ -191,6 +240,8 @@ name of the provider or the agent.
 - A room that woke an agent keeps a window, for a set length of time, in which the conversation goes
   on without the agent being called by name. That window exists for each room and each agent
   separately.
+- The end of a meeting wakes the supervisor of every participant with a quiet instruction, as the end
+  of a job wakes the agent that filed it.
 
 ## Where the machines stand
 
