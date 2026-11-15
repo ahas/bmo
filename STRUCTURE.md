@@ -29,6 +29,12 @@
   keeps the rooms and their rules, builds the turn an agent is handed, returns the answer to the room
   and wakes the agents a room's words, a quiet instruction or a job's end call for. It never reads
   which provider a message came from in order to decide anything.
+- **Console (콘솔)** — the system's own surface: where a user signs in, and where everything a user does
+  is done. It is a messenger that stands on its own and the union of every chat provider at once. With no
+  provider linked at all, people open rooms in it, talk to each other and talk to their own agent; and
+  whatever any provider's platform can do is done in the console, every provider's room standing in it as
+  a room, a room no provider carries being as much a room as any. A provider is a subset of it: what a
+  platform cannot show does not travel there.
 - **Gate (게이트)** — the stage between the receiver and the agent, on the way in and on the way out:
   it sanitises what enters a model's context, picks the reference a turn is handed, checks the answer
   and records every judgement it makes.
@@ -195,6 +201,14 @@ name of the provider or the agent.
 - **A user is one person across providers:** each identity on a platform is linked to their one
   account, so what they may do and what an agent knows of them follow the person. An identity linked to
   no account is an ordinary member of the room it speaks in.
+- **The console comes first, and a provider only supplies chat and connects it.** Rooms, people,
+  messages and files stand in the system, and a provider is one road they travel by. Nothing a signed-in
+  user does needs an identity on any provider's platform: reading, speaking, opening a room, letting
+  someone into it, searching and being told are all done with an account alone. A place that asks for a
+  provider's identity before a signed-in user may act is a fault.
+- **In the console a person is their account.** The one who speaks and reads there is the account, and
+  a room's members are accounts, whichever roads they also reach it by. What is granted to a person hangs
+  on their account, the owner's own among them, and never on the surface their words came through.
 - **The company is the unit of isolation.** Projects, rooms, meeting records, memories, people and
   search belong to one company, and nothing crosses from one company to another. The owner, as
   superadmin, reaches every company.
@@ -219,8 +233,14 @@ name of the provider or the agent.
   are in, only their own words and the agent's answers to them; and the record of a meeting is read by
   the supervisors of its participants, each of whom tells its own user what the meeting decided for
   them.
+- **The superadmin reaches everything and changes nothing of another's.** The owner, as superadmin,
+  reads every company's data wherever it stands, a person's private project and their talk alone with
+  their own supervisor among it. Another person's data is the superadmin's to read only: they do not
+  write it, share it, move it or remove it as that person. A read by the superadmin leaves nothing the
+  person can see: no mark of having been read, no notice, no presence. It stands for audit and security.
 - **A supervisor keeps its user's confidence.** What its user said to it alone never reaches another
-  user, a meeting record or a project, and a private project is never read from above. When a user
+  user, a meeting record or a project, and a private project is never read from above. The superadmin's
+  read is the one exception, and it tells no one what it read. When a user
   leaves their company their account is archived, and the head of the unit they belonged to reads what
   of it was never private: their public projects, the meetings they took part in, their tasks and the
   record of their work relations. Their private projects and what they said to their supervisor alone
