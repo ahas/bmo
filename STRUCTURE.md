@@ -55,19 +55,22 @@
   agent.
 - **Co-worker (코워커)** — a sub-agent for a worker's use only, which a worker is assigned out of the
   co-worker pool.
-- **User (사용자)** — a person with an account of their own on the system, in exactly one organisation
-  unit of one company. The owner is the first user and the platform's superadmin, the one user who
-  reaches every company.
+- **User (사용자)** — a person with an account of their own on the system, belonging to one home unit
+  of one company and free to hold further posts in other units of the same company. The owner is the
+  first user and the platform's superadmin, the one user who reaches every company.
 - **Company (회사)** — the top unit of an organisation and the unit its data is isolated by. A
   deployment holds any number of companies, and nothing of one is seen from another.
 - **Organisation unit (조직 단위)** — a folder in a company's tree below the company, of any depth. Every
-  unit is the same kind of thing: the words a company calls them by, such as division, centre, team or
-  part, are names only, and nothing reads a meaning into them. A unit is where a head's authority runs
-  and its members are organised, never a boundary of collaboration inside its company. Any unit may have
-  a head, and every head holds the same authority over their own unit and every unit below it: inviting
-  members, opening and changing projects, and granting, room by room, the right to call one's supervisor
-  into a group room. Each unit does its own kind of work, such as producing, inspecting another unit's
-  results or research. A person belongs to exactly one unit.
+  unit is the same kind of thing to the system. A unit may carry a kind in its company's own words, such
+  as site or branch, which is shown and may narrow a list, and which no permission, check or behaviour of
+  any unit reads. A unit is where a head's authority runs and its members are organised, never a
+  boundary of collaboration inside its company. Any unit may have a head, and every head holds the same
+  authority over their own unit and every unit below it: inviting members, opening and changing
+  projects, and granting, room by room, the right to call one's supervisor into a group room. Each unit
+  does its own kind of work, such as producing, inspecting another unit's results or research. A person
+  belongs to one home unit, which decides their company, their path and what gathers their own
+  projects, and may hold further posts in units of the same company; a post lists them in that unit and
+  puts them in its line, and gives no authority that a head's grant does not give.
 - **Project (프로젝트)** — a body of work that belongs to one organisation unit or to one person. Every
   user may open projects of their own. A project is public or private, and private until made public. A
   unit's project gathers the public projects of the people and units below it, reading their summary
