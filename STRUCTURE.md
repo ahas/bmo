@@ -148,8 +148,8 @@ name of the provider or the agent.
   explicit instruction to do it directly, it uses the TODO. When the owner tells it to do something itself,
   it may do it directly. For a change to the BMO system itself this is absolute: such a change goes through
   the TODO.
-- **A worker takes work from the TODO,** pushed by a subscription or pulled by a lease, works inside the
-  one checkout its item names, closes the item with what it did, and the receiver wakes the chat agent that
+- **A worker takes work from the TODO,** pushed by a subscription or pulled by a lease, works inside its
+  item's checkout and the checkouts lent to it, closes the item with what it did, and the receiver wakes the chat agent that
   filed it when the job ends.
 - **Workers and co-workers are sessions the agency supplies,** placed where the co-worker pool allows,
   reading the skills the content units place for them.
