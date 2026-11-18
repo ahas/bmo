@@ -36,7 +36,6 @@ and a unit is cloned by its own name beside the others.
 | `services/face` | bmo-face | The face on the case's screen, its editor and its server |
 | `services/gate` | bmo-gate | The gate stage of a turn, and the decision model it asks |
 | `services/gate-harvest` | bmo-gate-harvest | The gate's training data that holds attack material; private |
-| `services/graph` | bmo-graph | The code dependency graph of every repository, and the root graph |
 | `services/job` | bmo-job | The TODO as middleware: items, queues, leases, questions, subscriptions |
 | `services/kakaotalk` | bmo-kakaotalk | The KakaoTalk chat provider |
 | `services/mail` | bmo-mail | Mail as a service over the accounts' mailboxes |
