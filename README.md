@@ -42,7 +42,7 @@ and a unit is cloned by its own name beside the others.
 | `services/ms-teams` | bmo-ms-teams | The Microsoft Teams chat provider |
 | `services/node` | bmo-node | The list of machines and the hardware monitor |
 | `services/pocket` | bmo-pocket | The tool host, the toolbook and the tool SDK |
-| `services/project` | bmo-project | An organisation's projects, the work relations between them and their record, and the minutes of its meetings |
+| `services/work` | bmo-work | An organisation's projects, the work relations between them and their record, and the minutes of its meetings |
 | `services/receiver` | bmo-receiver | The chat receiver: rooms, rules, windows, the turn and the wake |
 | `services/remote` | bmo-remote | Terminal sessions and the remote desktop behind the console |
 | `services/review` | bmo-review | Code review over the registered checkouts |
