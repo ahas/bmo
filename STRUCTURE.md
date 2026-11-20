@@ -65,20 +65,29 @@
   as site or branch, which is shown and may narrow a list, and which no permission, check or behaviour of
   any unit reads. A unit is where a head's authority runs and its members are organised, never a
   boundary of collaboration inside its company. Any unit may have a head, and every head holds the same
-  authority over their own unit and every unit below it: inviting members, opening and changing
-  projects, and granting, room by room, the right to call one's supervisor into a group room. Each unit
+  authority over their own unit and every unit below it: inviting members, opening, assigning and
+  changing works, and granting, room by room, the right to call one's supervisor into a group room. Each unit
   does its own kind of work, such as producing, inspecting another unit's results or research. A person
-  belongs to one home unit, which decides their company, their path and what gathers their own
-  projects, and may hold further posts in units of the same company; a post lists them in that unit and
+  belongs to one home unit, which decides their company, their path and whose heads read the works
+  assigned to them, and may hold further posts in units of the same company; a post lists them in that unit and
   puts them in its line, and gives no authority that a head's grant does not give.
-- **Project (프로젝트)** — a body of work that belongs to one organisation unit or to one person. Every
-  user may open projects of their own. A project is public or private, and private until made public. A
-  unit's project gathers the public projects of the people and units below it, reading their summary
-  and state and their full record on request. A private project is read by its members alone, whoever
-  heads the units above it. A head above may add members to a unit's private project, and whoever is
-  added reads it as a member, every change of members shown to all of them; the members of a person's
-  own project are that person's alone to choose.
-- **Work relation (일의 관계)** — a link between two projects, such as a handover, an inspection, a
+- **Work (업무)** — a body of work in the work tree, which stands beside the organisation chart. Every
+  work has one assignee, and is either a unit's work or a person's own.
+  - A unit's work belongs to one organisation unit, its assignee being that unit's head unless another
+    is named. It splits into works below it to any depth, any of which may belong to another unit than
+    its parent, and each is assigned to one person by an assignment that records who assigned it.
+  - A unit's work and every assignment under it are never private. They are read by the heads of the
+    unit the work belongs to and of every unit above it; by the heads of the assignee's home unit and of
+    every unit above it, so a head an assignment passed over reads it too; by the members of the unit
+    the work belongs to and of every unit below it; by the assignee; and by whoever assigned it. Only the
+    assignee, whoever assigned it and those heads change it.
+  - A person's own work is one they opened as theirs and hung under no unit's work. It is read by that
+    person alone, whoever heads the units above them.
+  - No person's work is public on its own: a person makes their work public by moving it under a unit's
+    work, and from then it is that unit's work under the rule above.
+  - A person of another unit reads a unit's work only where a work relation links it to a work
+    assigned to them.
+- **Work relation (일의 관계)** — a link between two works, such as a handover, an inspection, a
   reference, a report or a change request. Work relations form a web of their own and never follow the
   organisation's tree.
 - **Node (노드)** — a machine the system reaches: where an engine stands, where a card is lent, where a
@@ -212,17 +221,18 @@ name of the provider or the agent.
 - **In the console a person is their account.** The one who speaks and reads there is the account, and
   a room's members are accounts, whichever roads they also reach it by. What is granted to a person hangs
   on their account, the owner's own among them, and never on the surface their words came through.
-- **The company is the unit of isolation.** Projects, rooms, meeting records, memories, people and
+- **The company is the unit of isolation.** Works, rooms, meeting records, memories, people and
   search belong to one company, and nothing crosses from one company to another. The owner, as
   superadmin, reaches every company.
 - **A shared engine serves every company and mixes none.** Every request to it carries its company and
   its account; an account reads only its own requests and logs; sessions and caches of a shared engine
   are never shared across companies.
-- **Inside a company, collaboration crosses units.** Anyone may be made a member of a project, a meeting
-  or a chat in their company, with no consent of their unit's head.
+- **Inside a company, collaboration crosses units.** A work relation may link the works of any two units,
+  and anyone may be made a member of a meeting or a chat in their company, with no consent of their
+  unit's head.
 - **Grants come from the owner, and a unit's head grants within their own unit and below.** The owner
   places companies, their organisation units and people. The head of a unit invites members to it or to
-  a unit below it, opens and changes projects there, and grants a member the right to call their own
+  a unit below it, opens, assigns and changes works there, and grants a member the right to call their own
   supervisor into a group room. That right is granted room by room, by the room's opener or the head of
   the unit the room belongs to, as a person is invited or afterwards. What a user may have an agent do
   is granted by permission, and nothing is open until it is granted; a grant names exactly what it opens
@@ -237,17 +247,18 @@ name of the provider or the agent.
   the supervisors of its participants, each of whom tells its own user what the meeting decided for
   them.
 - **The superadmin reaches everything and changes nothing of another's.** The owner, as superadmin,
-  reads every company's data wherever it stands, a person's private project and their talk alone with
+  reads every company's data wherever it stands, a person's own work and their talk alone with
   their own supervisor among it. Another person's data is the superadmin's to read only: they do not
   write it, share it, move it or remove it as that person. A read by the superadmin leaves nothing the
   person can see: no mark of having been read, no notice, no presence. It stands for audit and security.
 - **A supervisor keeps its user's confidence.** What its user said to it alone never reaches another
-  user, a meeting record or a project, and a private project is never read from above. The superadmin's
-  read is the one exception, and it tells no one what it read. When a user
+  user or a meeting record, and reaches the work tree only as what the user confirms: a record the
+  supervisor drafts of their day joins a work once they confirm it, and evidence on it is carried as a
+  reference alone, never the mail, file or talk it points to. A person's own work is never read from
+  above. The superadmin's read is the one exception, and it tells no one what it read. When a user
   leaves their company their account is archived, and the head of the unit they belonged to reads what
-  of it was never private: their public projects, the meetings they took part in, their tasks and the
-  record of their work relations. Their private projects and what they said to their supervisor alone
-  stay sealed.
+  of it was never private: the units' works assigned to them, the meetings they took part in and the record of
+  their work relations. Their own works and what they said to their supervisor alone stay sealed.
 - **The console is where a user signs in,** where the companies, their units, the accounts and the
   grants stand, and where every unit's screen is shown; the accounts are served to the other units, and
   no other unit keeps its own.
