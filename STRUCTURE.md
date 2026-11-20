@@ -80,7 +80,8 @@
     unit the work belongs to and of every unit above it; by the heads of the assignee's home unit and of
     every unit above it, so a head an assignment passed over reads it too; by the members of the unit
     the work belongs to and of every unit below it; by the assignee; and by whoever assigned it. Only the
-    assignee, whoever assigned it and those heads change it.
+    assignee, whoever assigned it and the heads of the unit it belongs to and of every unit above it
+    change it, and a head an assignment passed over never undoes it.
   - A person's own work is one they opened as theirs and hung under no unit's work. It is read by that
     person alone, whoever heads the units above them.
   - No person's work is public on its own: a person makes their work public by moving it under a unit's
