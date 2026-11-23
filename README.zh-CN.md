@@ -40,14 +40,12 @@ BMO 系统是一组仓库：每个单元一个仓库，全部并排放在这个�
 | `services/mail` | bmo-mail | 基于各账号邮箱的邮件服务 |
 | `services/node` | bmo-node | 机器列表与硬件监控 |
 | `services/note` | bmo-note | 基于 BlockSuite 编辑器的笔记，AFFiNE 的分支 |
-| `services/paint` | bmo-paint | 在 GPU 节点上绘制的图片 |
 | `services/pocket` | bmo-pocket | 工具宿主、工具目录与工具 SDK |
 | `services/receiver` | bmo-receiver | 聊天接收方：房间、规则、对话窗口、轮次与唤醒 |
 | `services/remote` | bmo-remote | 控制台背后的终端会话与远程桌面 |
 | `services/research` | bmo-research | 以文档形式留存的调研 |
 | `services/review` | bmo-review | 针对已登记检出的代码审查 |
 | `services/site` | bmo-site | bmo.ahas.io 项目网站 |
-| `services/song` | bmo-song | 在 GPU 节点上用指定声音制作并提供的歌曲 |
 | `services/telegram` | bmo-telegram | Telegram 聊天提供方 |
 | `services/testbed` | bmo-testbed | 测试台：队列、完整测试、快速检查与部署 |
 | `services/theater` | bmo-theater | 视频库：播放列表、续播与字幕 |

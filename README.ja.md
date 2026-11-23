@@ -40,14 +40,12 @@ BMO システムはリポジトリの集まりで、ユニット1つにつきリ
 | `services/mail` | bmo-mail | 各アカウントのメールボックス上のメールサービス |
 | `services/node` | bmo-node | マシン一覧とハードウェアモニター |
 | `services/note` | bmo-note | BlockSuite エディタのノート、AFFiNE のフォーク |
-| `services/paint` | bmo-paint | GPU ノードで描く画像 |
 | `services/pocket` | bmo-pocket | ツールホスト、ツール一覧、ツール SDK |
 | `services/receiver` | bmo-receiver | チャットレシーバー：ルーム、ルール、会話ウィンドウ、ターン、起動 |
 | `services/remote` | bmo-remote | コンソールの裏にあるターミナルセッションとリモートデスクトップ |
 | `services/research` | bmo-research | 文書として残るリサーチ |
 | `services/review` | bmo-review | 登録されたチェックアウトのコードレビュー |
 | `services/site` | bmo-site | bmo.ahas.io のプロジェクトサイト |
-| `services/song` | bmo-song | GPU ノードで指定の声で作り、配信する歌 |
 | `services/telegram` | bmo-telegram | Telegram チャットプロバイダー |
 | `services/testbed` | bmo-testbed | テストベッド：キュー、テストスイート、クイックチェック、デプロイ |
 | `services/theater` | bmo-theater | 動画の保管庫：プレイリスト、続きから再生、字幕 |

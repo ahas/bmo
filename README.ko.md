@@ -40,14 +40,12 @@ BMO 시스템은 저장소의 묶음입니다. 유닛 하나가 저장소 하나
 | `services/mail` | bmo-mail | 계정 메일함 위의 메일 서비스 |
 | `services/node` | bmo-node | 머신 목록과 하드웨어 모니터 |
 | `services/note` | bmo-note | BlockSuite 편집기 기반 노트, AFFiNE의 포크 |
-| `services/paint` | bmo-paint | GPU 노드에서 그리는 그림 |
 | `services/pocket` | bmo-pocket | 도구 호스트, 도구 목록, 도구 SDK |
 | `services/receiver` | bmo-receiver | 채팅 리시버: 방, 규칙, 대화 창, 턴, 깨우기 |
 | `services/remote` | bmo-remote | 콘솔 뒤의 터미널 세션과 원격 데스크톱 |
 | `services/research` | bmo-research | 문서로 남는 리서치 |
 | `services/review` | bmo-review | 등록된 체크아웃에 대한 코드 리뷰 |
 | `services/site` | bmo-site | bmo.ahas.io 프로젝트 사이트 |
-| `services/song` | bmo-song | GPU 노드에서 지정한 목소리로 만들어 내놓는 노래 |
 | `services/telegram` | bmo-telegram | Telegram 채팅 프로바이더 |
 | `services/testbed` | bmo-testbed | 테스트베드: 대기열, 전체 테스트, 빠른 검사, 배포 |
 | `services/theater` | bmo-theater | 영상 보관함: 재생 목록, 이어보기, 자막 |

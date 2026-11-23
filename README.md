@@ -43,14 +43,12 @@ and a unit is cloned by its own name beside the others.
 | `services/mail` | bmo-mail | Mail as a service over the accounts' mailboxes |
 | `services/node` | bmo-node | The list of machines and the hardware monitor |
 | `services/note` | bmo-note | Notes on the BlockSuite editor, a fork of AFFiNE |
-| `services/paint` | bmo-paint | Pictures drawn on a GPU node |
 | `services/pocket` | bmo-pocket | The tool host, the toolbook and the tool SDK |
 | `services/receiver` | bmo-receiver | The chat receiver: rooms, rules, windows, the turn and the wake |
 | `services/remote` | bmo-remote | Terminal sessions and the remote desktop behind the console |
 | `services/research` | bmo-research | Research runs filed as documents |
 | `services/review` | bmo-review | Code review over the registered checkouts |
 | `services/site` | bmo-site | The project site at bmo.ahas.io |
-| `services/song` | bmo-song | Songs made in a named voice on a GPU node, and served |
 | `services/telegram` | bmo-telegram | The Telegram chat provider |
 | `services/testbed` | bmo-testbed | The testbed: the queue, the suite, the quick checks and the deployment |
 | `services/theater` | bmo-theater | The video store: playlists, progress and subtitles |
