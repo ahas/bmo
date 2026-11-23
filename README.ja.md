@@ -49,11 +49,9 @@ BMO システムはリポジトリの集まりで、ユニット1つにつきリ
 | `services/telegram` | bmo-telegram | Telegram チャットプロバイダー |
 | `services/testbed` | bmo-testbed | テストベッド：キュー、テストスイート、クイックチェック、デプロイ |
 | `services/theater` | bmo-theater | 動画の保管庫：プレイリスト、続きから再生、字幕 |
-| `services/tui` | bmo-tui | エージェンシーのセッションが立つターミナル画面 |
 | `services/voc` | bmo-voc | お客様の声：メーカーへ送るバグ報告と提案 |
 | `services/voice` | bmo-voice | 音声エンジン：音声ノードでの学習済みの声と合成 |
 | `services/web` | bmo-web | コンソール：アカウントサービス、言語パック、画面 |
-| `services/word-chain` | bmo-word-chain | ルームでエージェントと遊ぶしりとり |
 | `tools/privacy-scan` | このリポジトリ | スクリプト1本：チェックアウトとその履歴の個人情報スキャン |
 
 一部のサービスとツールは非公開のため、ここには載せていません。

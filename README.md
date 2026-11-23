@@ -52,11 +52,9 @@ and a unit is cloned by its own name beside the others.
 | `services/telegram` | bmo-telegram | The Telegram chat provider |
 | `services/testbed` | bmo-testbed | The testbed: the queue, the suite, the quick checks and the deployment |
 | `services/theater` | bmo-theater | The video store: playlists, progress and subtitles |
-| `services/tui` | bmo-tui | The terminal screen an agency session stands in |
 | `services/voc` | bmo-voc | The customers' voice: bug reports and suggestions sent to the maker |
 | `services/voice` | bmo-voice | The voice engine: trained voices and synthesis on the voice nodes |
 | `services/web` | bmo-web | The console: the account service, the language packs and the screens |
-| `services/word-chain` | bmo-word-chain | The word-chain game a room plays with its agent |
 | `tools/privacy-scan` | this repository | One script: the privacy scan of a checkout and its history |
 
 Some services and tools are kept private and are not listed here.

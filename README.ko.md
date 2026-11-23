@@ -49,11 +49,9 @@ BMO 시스템은 저장소의 묶음입니다. 유닛 하나가 저장소 하나
 | `services/telegram` | bmo-telegram | Telegram 채팅 프로바이더 |
 | `services/testbed` | bmo-testbed | 테스트베드: 대기열, 전체 테스트, 빠른 검사, 배포 |
 | `services/theater` | bmo-theater | 영상 보관함: 재생 목록, 이어보기, 자막 |
-| `services/tui` | bmo-tui | 에이전시 세션이 서 있는 터미널 화면 |
 | `services/voc` | bmo-voc | 고객의 소리: 제조사에게 보내는 버그 신고와 건의 |
 | `services/voice` | bmo-voice | 음성 엔진: 음성 노드에서의 학습된 목소리와 합성 |
 | `services/web` | bmo-web | 콘솔: 계정 서비스, 언어 팩, 화면 |
-| `services/word-chain` | bmo-word-chain | 방에서 에이전트와 하는 끝말잇기 |
 | `tools/privacy-scan` | 이 저장소 | 스크립트 하나: 체크아웃과 그 이력의 개인정보 검사 |
 
 일부 서비스와 도구는 비공개로 두며 여기에 싣지 않습니다.

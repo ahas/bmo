@@ -49,11 +49,9 @@ BMO 系统是一组仓库：每个单元一个仓库，全部并排放在这个�
 | `services/telegram` | bmo-telegram | Telegram 聊天提供方 |
 | `services/testbed` | bmo-testbed | 测试台：队列、完整测试、快速检查与部署 |
 | `services/theater` | bmo-theater | 视频库：播放列表、续播与字幕 |
-| `services/tui` | bmo-tui | 代理会话所在的终端界面 |
 | `services/voc` | bmo-voc | 客户之声：发给制造方的缺陷报告与建议 |
 | `services/voice` | bmo-voice | 语音引擎：语音节点上训练好的声音与合成 |
 | `services/web` | bmo-web | 控制台：账号服务、语言包与各个界面 |
-| `services/word-chain` | bmo-word-chain | 在房间里与智能体玩的接龙游戏 |
 | `tools/privacy-scan` | 本仓库 | 一个脚本：检查检出及其历史中的个人信息 |
 
 部分服务与工具保持私有，未列于此处。
