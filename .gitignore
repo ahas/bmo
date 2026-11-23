@@ -4,6 +4,7 @@
 !/.gitignore
 !/LICENSE
 !/README.md
+!/README.*.md
 !/STRUCTURE.md
 !/docs/
 !/tools/

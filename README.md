@@ -31,29 +31,34 @@ and a unit is cloned by its own name beside the others.
 | `services/brain` | bmo-brain | Memory as middleware: rows, notes, watches, reminders, reference text |
 | `services/cache-siren` | bmo-cache-siren | The live watch of prompt-cache hits and new tokens |
 | `services/cache-warmer` | bmo-cache-warmer | The keepalive scheduler of prompt caches |
+| `services/calendar` | bmo-calendar | Calendars, events, alarms and bookings |
 | `services/cli` | bmo-cli | The entry command, which finds each unit's own command |
 | `services/discord` | bmo-discord | The Discord chat provider |
 | `services/drive` | bmo-drive | The file viewer over drives, object storage and the nodes' volumes |
 | `services/explorer` | bmo-explorer | Web reading as an upstream: search, page, preview, picture |
+| `services/eye` | bmo-eye | Seeing: pictures and video read by vision models |
 | `services/face` | bmo-face | The face on the case's screen, its editor and its server |
 | `services/gate` | bmo-gate | The gate stage of a turn: its reference, translation and the records |
 | `services/job` | bmo-job | The TODO as middleware: items, queues, leases, questions, subscriptions |
 | `services/mail` | bmo-mail | Mail as a service over the accounts' mailboxes |
 | `services/node` | bmo-node | The list of machines and the hardware monitor |
+| `services/note` | bmo-note | Notes on the BlockSuite editor, a fork of AFFiNE |
+| `services/paint` | bmo-paint | Pictures drawn on a GPU node |
 | `services/pocket` | bmo-pocket | The tool host, the toolbook and the tool SDK |
 | `services/receiver` | bmo-receiver | The chat receiver: rooms, rules, windows, the turn and the wake |
 | `services/remote` | bmo-remote | Terminal sessions and the remote desktop behind the console |
+| `services/research` | bmo-research | Research runs filed as documents |
 | `services/review` | bmo-review | Code review over the registered checkouts |
+| `services/site` | bmo-site | The project site at bmo.ahas.io |
 | `services/song` | bmo-song | Songs made in a named voice on a GPU node, and served |
 | `services/telegram` | bmo-telegram | The Telegram chat provider |
 | `services/testbed` | bmo-testbed | The testbed: the queue, the suite, the quick checks and the deployment |
+| `services/theater` | bmo-theater | The video store: playlists, progress and subtitles |
 | `services/tui` | bmo-tui | The terminal screen an agency session stands in |
+| `services/voc` | bmo-voc | The customers' voice: bug reports and suggestions sent to the maker |
 | `services/voice` | bmo-voice | The voice engine: trained voices and synthesis on the voice nodes |
 | `services/web` | bmo-web | The console: the account service, the language packs and the screens |
 | `services/word-chain` | bmo-word-chain | The word-chain game a room plays with its agent |
-| `tools/news` | bmo-news | The morning news edition, filed as a shared page |
-| `tools/stock-index` | bmo-stock-index | The daily closes of the Seoul and New York indices |
-| `tools/bmo-ear` | bmo-ear | The listening tool: a saved voice file answered as Korean text |
 | `tools/privacy-scan` | this repository | One script: the privacy scan of a checkout and its history |
 
-Some company-specific services are kept private and are not listed here.
+Some services and tools are kept private and are not listed here.
