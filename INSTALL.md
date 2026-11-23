@@ -41,7 +41,8 @@ Run each check; what to do where it fails stands beside it.
 
 | Check | Command | Where it fails |
 |---|---|---|
-| Linux with systemd | `test -d /run/systemd/system && uname -s` | BMO runs on a Linux machine with systemd. Tell the person this machine cannot host it |
+| Linux | `uname -s` | BMO runs on Linux. Tell the person this machine cannot host it |
+| systemd | `test -d /run/systemd/system` | Without systemd the set runs under the testbed's supervisor: follow 「A machine without systemd」 below |
 | A Debian or Ubuntu family system | `. /etc/os-release && echo "$ID $VERSION_ID"` | The package names below are Debian's and Ubuntu's; on another family, install the same programs with its package manager |
 | 64-bit x86 or ARM | `uname -m` (`x86_64` or `aarch64`) | Tell the person the machine is not supported |
 | Not root | `test "$(id -u)" -ne 0` | Install as an ordinary user; ask the person which user owns BMO, and work as that user |
@@ -75,8 +76,10 @@ psql --dbname=postgres --command='select 1' >/dev/null 2>&1 \
 command -v valkey-server || command -v redis-server \
   || sudo apt-get install -y valkey-server || sudo apt-get install -y redis-server
 
-# Lingering, so the services run without a login and start at boot.
-test "$(loginctl show-user "$(id -un)" --property=Linger --value)" = yes || sudo loginctl enable-linger "$(id -un)"
+# Lingering, so the services run without a login and start at boot; on a machine with systemd only.
+test -d /run/systemd/system || echo "no systemd: see 「A machine without systemd」"
+test ! -d /run/systemd/system \
+  || test "$(loginctl show-user "$(id -un)" --property=Linger --value)" = yes || sudo loginctl enable-linger "$(id -un)"
 
 # Rust, for this user.
 command -v cargo || { curl -fsSL https://sh.rustup.rs | sh -s -- -y && . "$HOME/.cargo/env"; }
@@ -123,6 +126,26 @@ installer="$HOME/bmo/services/testbed/target/release/bmo-testbed"
 Once the entry command and the testbed are installed (step 5 does them first), the same verb is `bmo install`, and
 you use that from then on, with `~/.local/bin` on the `PATH` (`export PATH="$HOME/.local/bin:$PATH"` where a fresh
 shell does not hold it yet).
+
+### A machine without systemd
+
+Where step 2 found no systemd, the set runs under the testbed's supervisor (bmo-testbed's `docs/supervise.md`): it
+runs the same unit files, and stand-ins for `systemctl`, `systemd-run` and `journalctl` on the PATH carry every
+call of the install and of the services to it. PostgreSQL and Valkey are started by their own service scripts
+(`sudo service postgresql start`, `sudo service valkey-server start`) where nothing starts them.
+
+Start the supervisor in the background, detached from your session, then put your shell under it before step 5:
+
+```sh
+setsid "$installer" supervise serve > /dev/null 2>&1 < /dev/null &
+"$installer" supervise status
+export PATH="$HOME/.local/share/bmo/data/supervise/bin:$PATH"
+export BMO_SUPERVISOR="$HOME/.local/share/bmo/data/supervise/control.sock"
+```
+
+The two exports are the lines `"$installer" supervise env` prints. Tell the person that nothing starts the
+supervisor when the machine starts: whatever starts their session must run `bmo-testbed supervise serve`, as the
+all-in-one desktop app does.
 
 ## 5. Run the install
 
@@ -229,12 +252,12 @@ These hold for every install, and a program that packages BMO for one person's c
 - **Progress is data.** Every step is one JSON line and `--status` answers each repository and port as one, so a
   progress screen reads `step` and `status` and shows `detail` to the person.
 - **Services are programs.** On a server each service runs as a systemd user unit its deployment keeps; each runs
-  one program reading its settings from the data root, so a packaged BMO with no user manager can start and stop
-  the same programs itself.
-- **A machine without systemd is not installed yet.** Every deployment, restart and health read goes through the
-  systemd user manager, so the first check of step 2 stops there. Running the same programs under a supervisor of
-  BMO's own, which the all-in-one desktop app needs, is the next stage's work; until it stands, tell the person
-  this machine cannot host BMO.
+  one program reading its settings from the data root.
+- **A machine without systemd runs the set under the testbed's supervisor.** It runs the same unit files, and its
+  stand-ins carry every `systemctl --user`, `systemd-run --user` and `journalctl --user` call of the install and
+  the services to it, so the install takes the same steps (「A machine without systemd」). The all-in-one desktop
+  app installs and runs the personal preset this way on a person's own computer, and on Windows inside a WSL 2
+  distribution of its own.
 - **No address points at another deployment.** Every address a service, an installer or a download names is the
   person's own deployment's, given as an input; none has a default naming anybody else's servers.
 
