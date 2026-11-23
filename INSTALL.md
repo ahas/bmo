@@ -92,8 +92,10 @@ Among them:
 - **Claude Code (`claude`)**, which runs BMO's agents: install it as its documentation says, then make sure it is
   signed in for this user. Signing in opens a browser: ask the person to complete that sign-in, the one step only
   they can do.
-- **`herdr`**, the terminal host the agents run in, at `~/.local/bin/herdr`. Where its `needs:` line names no
-  source you can reach, tell the person the agents cannot run without it and stop there.
+- **`herdr`**, the terminal host the agents run in (https://github.com/herdrdev/herdr), at `~/.local/bin/herdr`. The
+  install builds it itself from its repository at the release `bmo-agency` declares; its build needs **Zig 0.16.0**
+  on the `PATH` (https://ziglang.org/download/), and the Rust toolchain its repository pins, which `rustup` fetches
+  on its own. Where its `needs:` line says the build failed, install what it names and run the install again.
 - **`litellm`**, the model gateway: `uv tool install 'litellm[proxy]'` (with `uv` from https://docs.astral.sh/uv/).
 - **`tmux`** and **gnome-remote-desktop** (`grdctl`) for the remote desktop, **`ffmpeg`** for the video units.
 
@@ -165,7 +167,7 @@ a secret. The inputs a preset asks for are these; each line's `detail` says the 
 | `telegram.bot`, `telegram.owner-id` | Telegram: the bot's token from @BotFather, and the person's numeric Telegram id |
 | `discord.bot`, `discord.owner-id`, `discord.owner-channel` | Discord: the bot's token, the person's id and the channel of their direct messages with the bot |
 | `remote.desktop-password` | The password of the remote desktop the console opens |
-| `voice.*`, `eye.*`, `jake.*` | Operator only: the voice node, a Hugging Face sign-in, a vision key, the hub's public name |
+| `voice.*`, `eye.*`, `jake.*` | Operator only: the voice node, a Hugging Face sign-in, a vision key; the remote machine hub's public name, the HTTPS address its agent downloads are served at and the folder they are published into. None has a default: every address is the person's own deployment's |
 
 Never invent a value. Where the person does not know one, tell them where `detail` says it is found.
 
@@ -195,6 +197,11 @@ Every line must be `ok`. Then check by hand what a person would see:
 - Open the console's address (the `done` line's `next`) with `curl -fsS -o /dev/null -w '%{http_code}\n' <address>login`;
   it answers 200.
 - The verification lines `verify:bmo-receiver:…` passed: a test message stands in the person's own room.
+- For `operator`, the `verify:…:proxy` lines passed: the install writes the web paths of the face and the script
+  studio as files under the data root's `proxy/` folder, and the machine's nginx includes them once. Where the line
+  failed, ask the person to let you use root (「Getting root once」), add `include <data root>/proxy/*.conf;` inside
+  the nginx server block that serves the console's address, check it with `sudo nginx -t`, reload nginx with
+  `sudo systemctl reload nginx` and run the install again.
 - For the chat service, the verification line of `bmo-telegram` or `bmo-discord` passed. Ask the person to send
   their bot one message and check that BMO answers.
 
@@ -224,12 +231,20 @@ These hold for every install, and a program that packages BMO for one person's c
 - **Services are programs.** On a server each service runs as a systemd user unit its deployment keeps; each runs
   one program reading its settings from the data root, so a packaged BMO with no user manager can start and stop
   the same programs itself.
+- **A machine without systemd is not installed yet.** Every deployment, restart and health read goes through the
+  systemd user manager, so the first check of step 2 stops there. Running the same programs under a supervisor of
+  BMO's own, which the all-in-one desktop app needs, is the next stage's work; until it stands, tell the person
+  this machine cannot host BMO.
+- **No address points at another deployment.** Every address a service, an installer or a download names is the
+  person's own deployment's, given as an input; none has a default naming anybody else's servers.
 
 ## Later
 
 - **Continue a stopped install:** run the same `bmo install --preset …` again.
 - **Add one repository:** `bmo install --add <repository> --index ~/bmo`, for example `bmo-research`. It is cloned,
-  set up and put live, and the console shows what it turns on.
+  set up and put live, and the console shows what it turns on. Once BMO runs on the machine, this is BMO's own work,
+  the supervisor's alone: it runs `--add` only on the person's approval for that one repository, and none of its
+  jobs or workers ever runs it. Run it yourself only while you are installing, before BMO answers.
 - **See how it stands:** `bmo install --status --index ~/bmo`.
 - **Newer releases** are not the installer's: each repository's later commits go live through the testbed's
   deployment.
