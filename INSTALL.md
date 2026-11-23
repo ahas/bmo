@@ -139,11 +139,14 @@ Start the supervisor in the background, detached from your session, then put you
 ```sh
 setsid "$installer" supervise serve > /dev/null 2>&1 < /dev/null &
 "$installer" supervise status
-export PATH="$HOME/.local/share/bmo/data/supervise/bin:$PATH"
-export BMO_SUPERVISOR="$HOME/.local/share/bmo/data/supervise/control.sock"
+supervised() { "$installer" supervise env | sed -n "s/^$1=//p"; }
+export PATH="$(supervised PATH)" BMO_SUPERVISOR="$(supervised BMO_SUPERVISOR)" \
+  XDG_RUNTIME_DIR="$(supervised XDG_RUNTIME_DIR)"
 ```
 
-The two exports are the lines `"$installer" supervise env` prints. Tell the person that nothing starts the
+The three exports are the lines `"$installer" supervise env` prints: the stand-ins first on the PATH, the
+supervisor's socket, and the runtime directory every service reads. Where your harness does not keep a shell's
+environment from one command to the next, run these lines before each command of step 5. Tell the person that nothing starts the
 supervisor when the machine starts: whatever starts their session must run `bmo-testbed supervise serve`, as the
 all-in-one desktop app does.
 
