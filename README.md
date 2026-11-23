@@ -1,3 +1,5 @@
+**English** | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
+
 # bmo
 
 The BMO system as a set of repositories, one unit each, standing together in this folder. The shape
@@ -34,8 +36,7 @@ and a unit is cloned by its own name beside the others.
 | `services/drive` | bmo-drive | The file viewer over drives, object storage and the nodes' volumes |
 | `services/explorer` | bmo-explorer | Web reading as an upstream: search, page, preview, picture |
 | `services/face` | bmo-face | The face on the case's screen, its editor and its server |
-| `services/gate` | bmo-gate | The gate stage of a turn, and the decision model it asks |
-| `services/gate-harvest` | bmo-gate-harvest | The gate's training data that holds attack material; private |
+| `services/gate` | bmo-gate | The gate stage of a turn: its reference, translation and the records |
 | `services/job` | bmo-job | The TODO as middleware: items, queues, leases, questions, subscriptions |
 | `services/mail` | bmo-mail | Mail as a service over the accounts' mailboxes |
 | `services/node` | bmo-node | The list of machines and the hardware monitor |
