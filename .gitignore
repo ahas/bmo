@@ -1,11 +1,13 @@
-# This repository holds the structure of the set and its index alone. Every unit is a repository of
-# its own in the folders below, never tracked here.
+# This repository holds the structure of the set, its index, and the install runbook with its presets.
+# Every unit is a repository of its own in the folders below, never tracked here.
 /*
 !/.gitignore
 !/LICENSE
 !/README.md
 !/README.*.md
 !/STRUCTURE.md
+!/INSTALL.md
+!/presets.toml
 !/docs/
 !/tools/
 /tools/*

@@ -4,8 +4,20 @@
 
 The BMO system as a set of repositories, one unit each, standing together in this folder. The shape
 every unit holds to is `STRUCTURE.md`; what each unit does is that unit's own README and documents.
-This repository tracks the structure, this index and the one loose script; no unit is tracked here,
+This repository tracks the structure, this index, the install runbook with its presets and the one loose script; no unit is tracked here,
 and a unit is cloned by its own name beside the others.
+
+## Installing
+
+BMO is installed by a coding agent, never by hand. On the machine that will run it, open Claude Code or Codex and
+hand it this one line:
+
+```
+Read https://bmo.ahas.io/install.md and install BMO on this machine.
+```
+
+The agent follows `INSTALL.md`: it asks which install you want — `personal`, `team` or `operator`, the kinds
+`presets.toml` lists — asks only for what only you have, and tells you the console's address when it is done.
 
 ## The folders
 

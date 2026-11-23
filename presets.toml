@@ -1,0 +1,258 @@
+# The kinds of install the set offers, read by the testbed's install verb (bmo-testbed's docs/install.md,
+# 「The presets file」). Every repository of the set an install may clone stands below once, with the folder of
+# this checkout it is cloned into; each preset names the repositories it checks out and those it installs, in
+# the order they are deployed. What a repository needs to be installed is its own `install.toml`.
+
+presets = 1
+
+# The base libraries and the content sets, checked out for the services that build against them or read them.
+[[repository]]
+name = "bmo-chat"
+folder = "base/chat"
+url = "https://github.com/ahas/bmo-chat.git"
+
+[[repository]]
+name = "bmo-text"
+folder = "base/text"
+url = "https://github.com/ahas/bmo-text.git"
+
+[[repository]]
+name = "bmo-ui"
+folder = "base/ui"
+url = "https://github.com/ahas/bmo-ui.git"
+
+[[repository]]
+name = "bmo-persona"
+folder = "resources/persona"
+url = "https://github.com/ahas/bmo-persona.git"
+
+[[repository]]
+name = "bmo-skills"
+folder = "resources/skills"
+url = "https://github.com/ahas/bmo-skills.git"
+
+# The platform's own mechanism: the testbed deploys everything else, and the entry command finds every unit's
+# command.
+[[repository]]
+name = "bmo-testbed"
+folder = "services/testbed"
+url = "https://github.com/ahas/bmo-testbed.git"
+
+[[repository]]
+name = "bmo-cli"
+folder = "services/cli"
+url = "https://github.com/ahas/bmo-cli.git"
+
+# The core every install runs.
+[[repository]]
+name = "bmo-pocket"
+folder = "services/pocket"
+url = "https://github.com/ahas/bmo-pocket.git"
+
+[[repository]]
+name = "bmo-web"
+folder = "services/web"
+url = "https://github.com/ahas/bmo-web.git"
+
+[[repository]]
+name = "bmo-job"
+folder = "services/job"
+url = "https://github.com/ahas/bmo-job.git"
+
+[[repository]]
+name = "bmo-brain"
+folder = "services/brain"
+url = "https://github.com/ahas/bmo-brain.git"
+
+[[repository]]
+name = "bmo-cache-warmer"
+folder = "services/cache-warmer"
+url = "https://github.com/ahas/bmo-cache-warmer.git"
+
+[[repository]]
+name = "bmo-agency"
+folder = "services/agency"
+url = "https://github.com/ahas/bmo-agency.git"
+
+[[repository]]
+name = "bmo-receiver"
+folder = "services/receiver"
+url = "https://github.com/ahas/bmo-receiver.git"
+
+[[repository]]
+name = "bmo-gate"
+folder = "services/gate"
+url = "https://github.com/ahas/bmo-gate.git"
+
+[[repository]]
+name = "bmo-explorer"
+folder = "services/explorer"
+url = "https://github.com/ahas/bmo-explorer.git"
+
+# The chat services.
+[[repository]]
+name = "bmo-telegram"
+folder = "services/telegram"
+url = "https://github.com/ahas/bmo-telegram.git"
+
+[[repository]]
+name = "bmo-discord"
+folder = "services/discord"
+url = "https://github.com/ahas/bmo-discord.git"
+
+# A person's own work.
+[[repository]]
+name = "bmo-artifact"
+folder = "services/artifact"
+url = "https://github.com/ahas/bmo-artifact.git"
+
+[[repository]]
+name = "bmo-note"
+folder = "services/note"
+url = "https://github.com/ahas/bmo-note.git"
+
+[[repository]]
+name = "bmo-calendar"
+folder = "services/calendar"
+url = "https://github.com/ahas/bmo-calendar.git"
+
+[[repository]]
+name = "bmo-drive"
+folder = "services/drive"
+url = "https://github.com/ahas/bmo-drive.git"
+
+[[repository]]
+name = "bmo-mail"
+folder = "services/mail"
+url = "https://github.com/ahas/bmo-mail.git"
+
+[[repository]]
+name = "bmo-remote"
+folder = "services/remote"
+url = "https://github.com/ahas/bmo-remote.git"
+
+# A team's.
+[[repository]]
+name = "bmo-review"
+folder = "services/review"
+url = "https://github.com/ahas/bmo-review.git"
+
+[[repository]]
+name = "bmo-research"
+folder = "services/research"
+url = "https://github.com/ahas/bmo-research.git"
+features = ["research"]
+
+# An operator's: the machines, the cards, the voice, the face and the customers' voice.
+[[repository]]
+name = "bmo-node"
+folder = "services/node"
+url = "https://github.com/ahas/bmo-node.git"
+features = ["monitor"]
+
+[[repository]]
+name = "bmo-arbiter"
+folder = "services/arbiter"
+url = "https://github.com/ahas/bmo-arbiter.git"
+
+[[repository]]
+name = "bmo-voice"
+folder = "services/voice"
+url = "https://github.com/ahas/bmo-voice.git"
+
+[[repository]]
+name = "bmo-eye"
+folder = "services/eye"
+url = "https://github.com/ahas/bmo-eye.git"
+
+[[repository]]
+name = "bmo-face"
+folder = "services/face"
+url = "https://github.com/ahas/bmo-face.git"
+
+[[repository]]
+name = "bmo-voc"
+folder = "services/voc"
+url = "https://github.com/ahas/bmo-voc.git"
+
+[[repository]]
+name = "bmo-cache-siren"
+folder = "services/cache-siren"
+url = "https://github.com/ahas/bmo-cache-siren.git"
+features = ["siren"]
+
+[[repository]]
+name = "bmo-theater"
+folder = "services/theater"
+url = "https://github.com/ahas/bmo-theater.git"
+
+[[repository]]
+name = "jake"
+folder = "services/jake"
+url = "https://github.com/ahas/jake.git"
+
+# One person and their own BMO: the console, memory, the agents and their tools, web reading, one chat service,
+# and their documents, notes, calendar, files, mail and remote machine. No organisations, no customers' voice,
+# no face and nothing that needs a GPU.
+[preset.personal]
+summary = "One person and their own BMO: the console, memory, coding agents, one chat service, documents, notes, calendar, files, mail and remote desktop."
+clone = ["bmo-chat", "bmo-text", "bmo-ui", "bmo-skills", "bmo-node"]
+# The entry command and the tool host first, since every deployment after them links its command beside `bmo` and
+# registers its tools with the host; the testbed's own deployment registers its hosted deploy tool there too.
+units = [
+  "bmo-cli",
+  "bmo-pocket",
+  "bmo-testbed",
+  "bmo-web",
+  "bmo-job",
+  "bmo-brain",
+  "bmo-cache-warmer",
+  "bmo-agency",
+  "bmo-receiver",
+  "bmo-gate",
+  "bmo-persona",
+  "bmo-explorer",
+  "bmo-telegram",
+  "bmo-discord",
+  "bmo-artifact",
+  "bmo-note",
+  "bmo-calendar",
+  "bmo-drive",
+  "bmo-mail",
+  "bmo-remote",
+]
+features = []
+
+[[preset.personal.choose]]
+what = "the chat service the person talks to BMO through, besides the console"
+units = ["bmo-telegram", "bmo-discord"]
+
+# A team: everything personal, with companies, organisation units, members and room permissions, code review and
+# research. The GPU units are the operator's.
+[preset.team]
+summary = "Personal, plus companies, organisation units, members and room permissions, code review and research."
+extends = "personal"
+clone = []
+units = ["bmo-review", "bmo-research"]
+features = ["organizations"]
+
+# The centralised operation: every public unit, both chat services, the machines and their cards, the voice, the
+# eyes, the face, the customers' voice, the video store and the remote machines' hub.
+[preset.operator]
+summary = "Everything public: the customers' voice, BMO's face, voice and vision, GPU card sharing, the node monitor, the video store and the remote machine hub."
+extends = "team"
+clone = []
+units = [
+  "bmo-telegram",
+  "bmo-discord",
+  "bmo-node",
+  "bmo-arbiter",
+  "jake",
+  "bmo-voice",
+  "bmo-eye",
+  "bmo-face",
+  "bmo-voc",
+  "bmo-cache-siren",
+  "bmo-theater",
+]
+features = []
