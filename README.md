@@ -37,17 +37,13 @@ and a unit is cloned by its own name beside the others.
 | `services/gate` | bmo-gate | The gate stage of a turn, and the decision model it asks |
 | `services/gate-harvest` | bmo-gate-harvest | The gate's training data that holds attack material; private |
 | `services/job` | bmo-job | The TODO as middleware: items, queues, leases, questions, subscriptions |
-| `services/kakaotalk` | bmo-kakaotalk | The KakaoTalk chat provider |
 | `services/mail` | bmo-mail | Mail as a service over the accounts' mailboxes |
-| `services/ms-teams` | bmo-ms-teams | The Microsoft Teams chat provider |
 | `services/node` | bmo-node | The list of machines and the hardware monitor |
 | `services/pocket` | bmo-pocket | The tool host, the toolbook and the tool SDK |
-| `services/work` | bmo-work | An organisation's projects, the work relations between them and their record, and the minutes of its meetings |
 | `services/receiver` | bmo-receiver | The chat receiver: rooms, rules, windows, the turn and the wake |
 | `services/remote` | bmo-remote | Terminal sessions and the remote desktop behind the console |
 | `services/review` | bmo-review | Code review over the registered checkouts |
 | `services/song` | bmo-song | Songs made in a named voice on a GPU node, and served |
-| `services/lab-arena` | bmo-lab-arena | The text-generation engine the arbiter places on the nodes |
 | `services/telegram` | bmo-telegram | The Telegram chat provider |
 | `services/testbed` | bmo-testbed | The testbed: the queue, the suite, the quick checks and the deployment |
 | `services/tui` | bmo-tui | The terminal screen an agency session stands in |
@@ -58,3 +54,5 @@ and a unit is cloned by its own name beside the others.
 | `tools/stock-index` | bmo-stock-index | The daily closes of the Seoul and New York indices |
 | `tools/bmo-ear` | bmo-ear | The listening tool: a saved voice file answered as Korean text |
 | `tools/privacy-scan` | this repository | One script: the privacy scan of a checkout and its history |
+
+Some company-specific services are kept private and are not listed here.

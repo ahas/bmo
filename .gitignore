@@ -2,6 +2,7 @@
 # its own in the folders below, never tracked here.
 /*
 !/.gitignore
+!/LICENSE
 !/README.md
 !/STRUCTURE.md
 !/docs/
