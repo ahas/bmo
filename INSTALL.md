@@ -64,8 +64,8 @@ Install only what is missing; each line's first command checks.
 
 ```sh
 # The system's packages.
-command -v git && command -v cc && command -v pkg-config && command -v curl && command -v jq \
-  || sudo apt-get install -y git build-essential pkg-config libssl-dev curl jq ca-certificates unzip
+command -v git && command -v cc && command -v pkg-config && command -v curl && command -v jq && command -v zstd \
+  || sudo apt-get install -y git build-essential pkg-config libssl-dev curl jq ca-certificates unzip zstd
 
 # PostgreSQL, with a role for this user who may make databases.
 command -v psql || sudo apt-get install -y postgresql postgresql-contrib
