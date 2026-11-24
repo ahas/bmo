@@ -1,6 +1,25 @@
-[English](README.md) | [한국어](README.ko.md) | **日本語** | [简体中文](README.zh-CN.md)
+<p align="center">
+  <a href="https://bmo.ahas.io/ja/"><img src="https://bmo.ahas.io/icon.svg" alt="BMO" width="120" height="120"></a>
+</p>
 
-# bmo
+<h1 align="center">BMO</h1>
+
+<p align="center">自分のマシンで動く自分だけの AI チーム: 一人ひとりに BMO、組織とそのエージェントまで。</p>
+
+<p align="center">
+  <a href="https://bmo.ahas.io/ja/"><img alt="Website" src="https://img.shields.io/badge/website-bmo.ahas.io-6366f1?style=flat-square"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square"></a>
+  <a href="https://bmo.ahas.io/ja/releases/"><img alt="Version" src="https://img.shields.io/badge/version-1.0.0-0ea5e9?style=flat-square"></a>
+  <img alt="Rust" src="https://img.shields.io/badge/Rust-servers-b7410e?style=flat-square&logo=rust&logoColor=white">
+  <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-console-00dc82?style=flat-square&logo=nuxt&logoColor=white">
+  <img alt="Languages" src="https://img.shields.io/badge/i18n-ko%20%C2%B7%20en%20%C2%B7%20ja%20%C2%B7%20zh-f59e0b?style=flat-square">
+</p>
+
+<p align="center">
+  <a href="https://bmo.ahas.io/ja/">ウェブサイト</a> · <a href="https://bmo.ahas.io/ja/guide/">ガイドブック</a> · <a href="https://bmo.ahas.io/ja/api/">API リファレンス</a> · <a href="https://bmo.ahas.io/ja/releases/">リリースノート</a>
+</p>
+
+<p align="center"><a href="README.md">English</a> | <a href="README.ko.md">한국어</a> | <b>日本語</b> | <a href="README.zh-CN.md">简体中文</a></p>
 
 BMO システムはリポジトリの集まりで、ユニット1つにつきリポジトリ1つが、このフォルダの中に並んでいます。すべてのユニットが従う形は `STRUCTURE.md` に、各ユニットの役割はそのユニット自身の README と文書にあります。このリポジトリが追跡するのは構造、この一覧、インストールのランブックとそのプリセット、独立したスクリプト1本だけです。ユニットはここでは追跡せず、それぞれ自分の名前でほかのユニットの隣にクローンします。
 

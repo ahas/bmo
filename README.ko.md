@@ -1,6 +1,25 @@
-[English](README.md) | **한국어** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
+<p align="center">
+  <a href="https://bmo.ahas.io/ko/"><img src="https://bmo.ahas.io/icon.svg" alt="BMO" width="120" height="120"></a>
+</p>
 
-# bmo
+<h1 align="center">BMO</h1>
+
+<p align="center">내 기기에서 돌아가는 나만의 AI 팀: 사람마다 BMO 하나, 조직과 그 에이전트까지.</p>
+
+<p align="center">
+  <a href="https://bmo.ahas.io/ko/"><img alt="Website" src="https://img.shields.io/badge/website-bmo.ahas.io-6366f1?style=flat-square"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square"></a>
+  <a href="https://bmo.ahas.io/ko/releases/"><img alt="Version" src="https://img.shields.io/badge/version-1.0.0-0ea5e9?style=flat-square"></a>
+  <img alt="Rust" src="https://img.shields.io/badge/Rust-servers-b7410e?style=flat-square&logo=rust&logoColor=white">
+  <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-console-00dc82?style=flat-square&logo=nuxt&logoColor=white">
+  <img alt="Languages" src="https://img.shields.io/badge/i18n-ko%20%C2%B7%20en%20%C2%B7%20ja%20%C2%B7%20zh-f59e0b?style=flat-square">
+</p>
+
+<p align="center">
+  <a href="https://bmo.ahas.io/ko/">웹사이트</a> · <a href="https://bmo.ahas.io/ko/guide/">가이드북</a> · <a href="https://bmo.ahas.io/ko/api/">API 명세</a> · <a href="https://bmo.ahas.io/ko/releases/">릴리즈 노트</a>
+</p>
+
+<p align="center"><a href="README.md">English</a> | <b>한국어</b> | <a href="README.ja.md">日本語</a> | <a href="README.zh-CN.md">简体中文</a></p>
 
 BMO 시스템은 저장소의 묶음입니다. 유닛 하나가 저장소 하나이고, 모두 이 폴더 안에 나란히 섭니다. 모든 유닛이 따르는 구조는 `STRUCTURE.md`에 있고, 각 유닛이 하는 일은 그 유닛의 README와 문서에 있습니다. 이 저장소는 구조와 이 목록, 설치 런북과 그 프리셋, 그리고 따로 떨어진 스크립트 하나만 추적합니다. 유닛은 여기서 추적하지 않으며, 각 유닛은 자기 이름으로 다른 유닛 옆에 클론합니다.
 
