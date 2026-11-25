@@ -79,6 +79,7 @@ https://bmo.ahas.io/install.md 를 읽고 이 컴퓨터에 BMO를 설치해 줘.
 | `services/voc` | [bmo-voc](https://github.com/ahas/bmo-voc) | 고객의 소리: 제조사에게 보내는 버그 신고와 건의 |
 | `services/voice` | [bmo-voice](https://github.com/ahas/bmo-voice) | 음성 엔진: 음성 노드에서의 학습된 목소리와 합성 |
 | `services/web` | [bmo-web](https://github.com/ahas/bmo-web) | 콘솔: 계정 서비스, 언어 팩, 화면 |
+| `tools/bmo-ear` | [bmo-ear](https://github.com/ahas/bmo-ear) | 듣기: 저장된 음성 파일을 GPU 노드에서 받아쓰기 |
 | `tools/privacy-scan` | 이 저장소 | 스크립트 하나: 체크아웃과 그 이력의 개인정보 검사 |
 
 일부 서비스와 도구는 비공개로 두며 여기에 싣지 않습니다.

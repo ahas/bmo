@@ -79,6 +79,7 @@ BMO 由编程智能体安装，而不是手动安装。在将要运行 BMO 的�
 | `services/voc` | [bmo-voc](https://github.com/ahas/bmo-voc) | 客户之声：发给制造方的缺陷报告与建议 |
 | `services/voice` | [bmo-voice](https://github.com/ahas/bmo-voice) | 语音引擎：语音节点上训练好的声音与合成 |
 | `services/web` | [bmo-web](https://github.com/ahas/bmo-web) | 控制台：账号服务、语言包与各个界面 |
+| `tools/bmo-ear` | [bmo-ear](https://github.com/ahas/bmo-ear) | 听写：在 GPU 节点上转写保存的语音文件 |
 | `tools/privacy-scan` | 本仓库 | 一个脚本：检查检出及其历史中的个人信息 |
 
 部分服务与工具保持私有，未列于此处。

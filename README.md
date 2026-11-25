@@ -84,6 +84,7 @@ The agent follows `INSTALL.md`: it asks which install you want — `personal`, `
 | `services/voc` | [bmo-voc](https://github.com/ahas/bmo-voc) | The customers' voice: bug reports and suggestions sent to the maker |
 | `services/voice` | [bmo-voice](https://github.com/ahas/bmo-voice) | The voice engine: trained voices and synthesis on the voice nodes |
 | `services/web` | [bmo-web](https://github.com/ahas/bmo-web) | The console: the account service, the language packs and the screens |
+| `tools/bmo-ear` | [bmo-ear](https://github.com/ahas/bmo-ear) | Listening: a saved voice file transcribed on a GPU node |
 | `tools/privacy-scan` | this repository | One script: the privacy scan of a checkout and its history |
 
 Some services and tools are kept private and are not listed here.

@@ -79,6 +79,7 @@ https://bmo.ahas.io/install.md を読んで、このマシンに BMO をイン�
 | `services/voc` | [bmo-voc](https://github.com/ahas/bmo-voc) | お客様の声：メーカーへ送るバグ報告と提案 |
 | `services/voice` | [bmo-voice](https://github.com/ahas/bmo-voice) | 音声エンジン：音声ノードでの学習済みの声と合成 |
 | `services/web` | [bmo-web](https://github.com/ahas/bmo-web) | コンソール：アカウントサービス、言語パック、画面 |
+| `tools/bmo-ear` | [bmo-ear](https://github.com/ahas/bmo-ear) | 聞くこと：保存された音声ファイルをGPUノードで文字起こし |
 | `tools/privacy-scan` | このリポジトリ | スクリプト1本：チェックアウトとその履歴の個人情報スキャン |
 
 一部のサービスとツールは非公開のため、ここには載せていません。
