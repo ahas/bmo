@@ -206,7 +206,8 @@ Never invent a value. Where the person does not know one, tell them where `detai
 5. Makes the tokens, the PostgreSQL databases and every settings file, and the console features file that leaves
    out what the preset does not hold.
 6. Puts each repository's first release live, one at a time, in the preset's order, through the testbed's
-   deployment, and runs its after-steps: the first console account, the first chat agent, the owner's room.
+   deployment, and runs its after-steps: the first console account, the first chat agent and the general lessons
+   its empty brain starts from, the owner's room.
 7. Asks every service's health and runs the repositories' own verifications, among them a test message into the
    person's own room.
 
