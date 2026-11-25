@@ -21,6 +21,20 @@ name = "bmo-ui"
 folder = "base/ui"
 url = "https://github.com/ahas/bmo-ui.git"
 
+# The shared base every application builds on: a base library the applications take by path,
+# checked out beside them and here for the install to find.
+[[repository]]
+name = "bmo-app-sdk"
+folder = "base/app-sdk"
+url = "https://github.com/ahas/bmo-app-sdk.git"
+
+# The owner's applications stand beside the set and install one at a time with
+# `bmo install --add <name>`; each keeps its own checkout, linked here for the install.
+[[repository]]
+name = "bmo-house"
+folder = "apps/bmo-house"
+url = "https://github.com/ahas/bmo-house.git"
+
 [[repository]]
 name = "bmo-persona"
 folder = "resources/persona"
