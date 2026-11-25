@@ -88,6 +88,12 @@ name = "bmo-agency"
 folder = "services/agency"
 url = "https://github.com/ahas/bmo-agency.git"
 
+# The platform service the web and the agency gather into as their parts move in.
+[[repository]]
+name = "bmo-platform"
+folder = "services/platform"
+url = "https://github.com/ahas/bmo-platform.git"
+
 [[repository]]
 name = "bmo-receiver"
 folder = "services/receiver"
