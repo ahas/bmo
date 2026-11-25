@@ -10,6 +10,7 @@
   <a href="https://bmo.ahas.io/zh/"><img alt="Website" src="https://img.shields.io/badge/website-bmo.ahas.io-6366f1?style=flat-square"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square"></a>
   <a href="https://bmo.ahas.io/zh/releases/"><img alt="Version" src="https://img.shields.io/github/v/tag/ahas/bmo?include_prereleases&sort=semver&label=version&color=0ea5e9&style=flat-square"></a>
+  <a href="https://github.com/sponsors/ahas"><img alt="Sponsor" src="https://img.shields.io/badge/Sponsor-EA4AAA?logo=githubsponsors&logoColor=fff&style=flat-square"></a>
   <img alt="Rust" src="https://img.shields.io/badge/Rust-servers-b7410e?style=flat-square&logo=rust&logoColor=white">
   <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-console-00dc82?style=flat-square&logo=nuxt&logoColor=white">
   <img alt="Languages" src="https://img.shields.io/badge/i18n-ko%20%C2%B7%20en%20%C2%B7%20ja%20%C2%B7%20zh-f59e0b?style=flat-square">
