@@ -210,7 +210,7 @@ url = "https://github.com/ahas/jake.git"
 # no face and nothing that needs a GPU.
 [preset.personal]
 summary = "One person and their own BMO: the console, memory, coding agents, one chat service, documents, notes, calendar, files, mail and remote desktop."
-clone = ["bmo-chat", "bmo-text", "bmo-ui", "bmo-skills", "bmo-node"]
+clone = ["bmo-chat", "bmo-text", "bmo-ui", "bmo-skills", "bmo-node", "bmo-app-sdk"]
 # The entry command and the tool host first, since every deployment after them links its command beside `bmo` and
 # registers its tools with the host; the testbed's own deployment registers its hosted deploy tool there too.
 units = [
