@@ -96,7 +96,7 @@ Among them:
   signed in for this user. Signing in opens a browser: ask the person to complete that sign-in, the one step only
   they can do.
 - **`herdr`**, the terminal host the agents run in (https://github.com/herdrdev/herdr), at `~/.local/bin/herdr`. The
-  install builds it itself from its repository at the release `bmo-agency` declares; its build needs **Zig 0.16.0**
+  install builds it itself from its repository at the release `bmo-platform` declares; its build needs **Zig 0.16.0**
   on the `PATH` (https://ziglang.org/download/), and the Rust toolchain its repository pins, which `rustup` fetches
   on its own. Where its `needs:` line says the build failed, install what it names and run the install again.
 - **`litellm`**, the model gateway: `uv tool install 'litellm[proxy]'` (with `uv` from https://docs.astral.sh/uv/).
