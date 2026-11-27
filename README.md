@@ -54,7 +54,7 @@ The agent follows `INSTALL.md`: it asks which install you want — `personal`, `
 | `base/ui` | [bmo-ui](https://github.com/ahas/bmo-ui) | The console's Nuxt layer: tokens, components and behaviours every screen is built from |
 | `resources/persona` | [bmo-persona](https://github.com/ahas/bmo-persona) | The persona layers and the lore library of a chat agent |
 | `resources/skills` | [bmo-skills](https://github.com/ahas/bmo-skills) | The skills a worker is given, and the placer that hands them over |
-| `services/platform` | [bmo-platform](https://github.com/ahas/bmo-platform) | The platform: agent sessions supplied, placed, carried and ended, the co-worker pool, the account service and the console |
+| `services/agency` | [bmo-agency](https://github.com/ahas/bmo-agency) | Agent sessions supplied, placed, carried and ended; the co-worker pool |
 | `services/arbiter` | [bmo-arbiter](https://github.com/ahas/bmo-arbiter) | The card arbiter of the GPU nodes whose cards the engines share |
 | `services/artifact` | [bmo-artifact](https://github.com/ahas/bmo-artifact) | Documents kept, searched and shared |
 | `services/brain` | [bmo-brain](https://github.com/ahas/bmo-brain) | Memory as middleware: rows, notes, watches, reminders, reference text |
@@ -83,6 +83,7 @@ The agent follows `INSTALL.md`: it asks which install you want — `personal`, `
 | `services/theater` | [bmo-theater](https://github.com/ahas/bmo-theater) | The video store: playlists, progress and subtitles |
 | `services/voc` | [bmo-voc](https://github.com/ahas/bmo-voc) | The customers' voice: bug reports and suggestions sent to the maker |
 | `services/voice` | [bmo-voice](https://github.com/ahas/bmo-voice) | The voice engine: trained voices and synthesis on the voice nodes |
+| `services/web` | [bmo-web](https://github.com/ahas/bmo-web) | The console: the account service, the language packs and the screens |
 | `tools/bmo-ear` | [bmo-ear](https://github.com/ahas/bmo-ear) | Listening: a saved voice file transcribed on a GPU node |
 | `tools/privacy-scan` | this repository | One script: the privacy scan of a checkout and its history |
 

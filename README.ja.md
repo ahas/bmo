@@ -49,7 +49,7 @@ https://bmo.ahas.io/install.md を読んで、このマシンに BMO をイン�
 | `base/ui` | [bmo-ui](https://github.com/ahas/bmo-ui) | コンソールの Nuxt レイヤー：すべての画面を形づくるトークン、コンポーネント、振る舞い |
 | `resources/persona` | [bmo-persona](https://github.com/ahas/bmo-persona) | チャットエージェントのペルソナ層と設定資料 |
 | `resources/skills` | [bmo-skills](https://github.com/ahas/bmo-skills) | ワーカーに渡すスキルと、それを配置する道具 |
-| `services/platform` | [bmo-platform](https://github.com/ahas/bmo-platform) | プラットフォーム：エージェントセッションの供給、配置、進行、終了と協働者プール、アカウントサービスとコンソール |
+| `services/agency` | [bmo-agency](https://github.com/ahas/bmo-agency) | エージェントセッションの供給、配置、進行、終了と協働者プール |
 | `services/arbiter` | [bmo-arbiter](https://github.com/ahas/bmo-arbiter) | エンジンがカードを共有する GPU ノードのカード調停役 |
 | `services/artifact` | [bmo-artifact](https://github.com/ahas/bmo-artifact) | 文書の保管、検索、共有 |
 | `services/brain` | [bmo-brain](https://github.com/ahas/bmo-brain) | ミドルウェアとしての記憶：行、ノート、監視、リマインダー、参照テキスト |
@@ -78,6 +78,7 @@ https://bmo.ahas.io/install.md を読んで、このマシンに BMO をイン�
 | `services/theater` | [bmo-theater](https://github.com/ahas/bmo-theater) | 動画の保管庫：プレイリスト、続きから再生、字幕 |
 | `services/voc` | [bmo-voc](https://github.com/ahas/bmo-voc) | お客様の声：メーカーへ送るバグ報告と提案 |
 | `services/voice` | [bmo-voice](https://github.com/ahas/bmo-voice) | 音声エンジン：音声ノードでの学習済みの声と合成 |
+| `services/web` | [bmo-web](https://github.com/ahas/bmo-web) | コンソール：アカウントサービス、言語パック、画面 |
 | `tools/bmo-ear` | [bmo-ear](https://github.com/ahas/bmo-ear) | 聞くこと：保存された音声ファイルをGPUノードで文字起こし |
 | `tools/privacy-scan` | このリポジトリ | スクリプト1本：チェックアウトとその履歴の個人情報スキャン |
 

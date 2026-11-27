@@ -49,7 +49,7 @@ https://bmo.ahas.io/install.md 를 읽고 이 컴퓨터에 BMO를 설치해 줘.
 | `base/ui` | [bmo-ui](https://github.com/ahas/bmo-ui) | 콘솔의 Nuxt 레이어: 모든 화면을 이루는 토큰, 컴포넌트, 동작 |
 | `resources/persona` | [bmo-persona](https://github.com/ahas/bmo-persona) | 채팅 에이전트의 페르소나 레이어와 설정집 |
 | `resources/skills` | [bmo-skills](https://github.com/ahas/bmo-skills) | 워커가 받는 스킬과, 그것을 건네주는 배치 도구 |
-| `services/platform` | [bmo-platform](https://github.com/ahas/bmo-platform) | 플랫폼: 에이전트 세션의 공급, 배치, 진행, 종료와 협업자 풀, 계정 서비스와 콘솔 |
+| `services/agency` | [bmo-agency](https://github.com/ahas/bmo-agency) | 에이전트 세션의 공급, 배치, 진행, 종료와 협업자 풀 |
 | `services/arbiter` | [bmo-arbiter](https://github.com/ahas/bmo-arbiter) | 엔진들이 카드를 나눠 쓰는 GPU 노드의 카드 중재자 |
 | `services/artifact` | [bmo-artifact](https://github.com/ahas/bmo-artifact) | 문서의 보관, 검색, 공유 |
 | `services/brain` | [bmo-brain](https://github.com/ahas/bmo-brain) | 미들웨어로서의 기억: 행, 노트, 감시, 알림, 참고 텍스트 |
@@ -78,6 +78,7 @@ https://bmo.ahas.io/install.md 를 읽고 이 컴퓨터에 BMO를 설치해 줘.
 | `services/theater` | [bmo-theater](https://github.com/ahas/bmo-theater) | 영상 보관함: 재생 목록, 이어보기, 자막 |
 | `services/voc` | [bmo-voc](https://github.com/ahas/bmo-voc) | 고객의 소리: 제조사에게 보내는 버그 신고와 건의 |
 | `services/voice` | [bmo-voice](https://github.com/ahas/bmo-voice) | 음성 엔진: 음성 노드에서의 학습된 목소리와 합성 |
+| `services/web` | [bmo-web](https://github.com/ahas/bmo-web) | 콘솔: 계정 서비스, 언어 팩, 화면 |
 | `tools/bmo-ear` | [bmo-ear](https://github.com/ahas/bmo-ear) | 듣기: 저장된 음성 파일을 GPU 노드에서 받아쓰기 |
 | `tools/privacy-scan` | 이 저장소 | 스크립트 하나: 체크아웃과 그 이력의 개인정보 검사 |
 

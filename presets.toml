@@ -64,9 +64,9 @@ folder = "services/pocket"
 url = "https://github.com/ahas/bmo-pocket.git"
 
 [[repository]]
-name = "bmo-platform"
-folder = "services/platform"
-url = "https://github.com/ahas/bmo-platform.git"
+name = "bmo-web"
+folder = "services/web"
+url = "https://github.com/ahas/bmo-web.git"
 
 [[repository]]
 name = "bmo-job"
@@ -83,6 +83,10 @@ name = "bmo-cache-warmer"
 folder = "services/cache-warmer"
 url = "https://github.com/ahas/bmo-cache-warmer.git"
 
+[[repository]]
+name = "bmo-agency"
+folder = "services/agency"
+url = "https://github.com/ahas/bmo-agency.git"
 
 # The platform service the web and the agency gather into as their parts move in.
 [[repository]]
@@ -219,10 +223,11 @@ units = [
   "bmo-cli",
   "bmo-pocket",
   "bmo-testbed",
-  "bmo-platform",
+  "bmo-web",
   "bmo-job",
   "bmo-brain",
   "bmo-cache-warmer",
+  "bmo-agency",
   "bmo-receiver",
   "bmo-gate",
   "bmo-persona",

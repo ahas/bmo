@@ -49,7 +49,7 @@ BMO 由编程智能体安装，而不是手动安装。在将要运行 BMO 的�
 | `base/ui` | [bmo-ui](https://github.com/ahas/bmo-ui) | 控制台的 Nuxt 层：构成每个界面的设计令牌、组件与行为 |
 | `resources/persona` | [bmo-persona](https://github.com/ahas/bmo-persona) | 聊天智能体的人设层与设定集 |
 | `resources/skills` | [bmo-skills](https://github.com/ahas/bmo-skills) | 交给工作者的技能，以及分发它们的放置工具 |
-| `services/platform` | [bmo-platform](https://github.com/ahas/bmo-platform) | 平台：智能体会话的供给、放置、推进与结束、协作者池、账户服务与控制台 |
+| `services/agency` | [bmo-agency](https://github.com/ahas/bmo-agency) | 智能体会话的供给、放置、推进与结束，以及协作者池 |
 | `services/arbiter` | [bmo-arbiter](https://github.com/ahas/bmo-arbiter) | 多个引擎共享显卡的 GPU 节点的显卡仲裁 |
 | `services/artifact` | [bmo-artifact](https://github.com/ahas/bmo-artifact) | 文档的保存、搜索与分享 |
 | `services/brain` | [bmo-brain](https://github.com/ahas/bmo-brain) | 作为中间件的记忆：记录、笔记、监视、提醒、参考文本 |
@@ -78,6 +78,7 @@ BMO 由编程智能体安装，而不是手动安装。在将要运行 BMO 的�
 | `services/theater` | [bmo-theater](https://github.com/ahas/bmo-theater) | 视频库：播放列表、续播与字幕 |
 | `services/voc` | [bmo-voc](https://github.com/ahas/bmo-voc) | 客户之声：发给制造方的缺陷报告与建议 |
 | `services/voice` | [bmo-voice](https://github.com/ahas/bmo-voice) | 语音引擎：语音节点上训练好的声音与合成 |
+| `services/web` | [bmo-web](https://github.com/ahas/bmo-web) | 控制台：账号服务、语言包与各个界面 |
 | `tools/bmo-ear` | [bmo-ear](https://github.com/ahas/bmo-ear) | 听写：在 GPU 节点上转写保存的语音文件 |
 | `tools/privacy-scan` | 本仓库 | 一个脚本：检查检出及其历史中的个人信息 |
 
