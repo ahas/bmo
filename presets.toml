@@ -218,6 +218,7 @@ units = [
   "bmo-web",
   "bmo-job",
   "bmo-brain",
+  "bmo-cache-warmer",
   "bmo-agency",
   "bmo-receiver",
   "bmo-gate",
