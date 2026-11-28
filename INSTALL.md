@@ -273,8 +273,11 @@ These hold for every install, and a program that packages BMO for one person's c
   the supervisor's alone: it runs `--add` only on the person's approval for that one repository, and none of its
   jobs or workers ever runs it. Run it yourself only while you are installing, before BMO answers.
 - **See how it stands:** `bmo install --status --index ~/bmo`.
-- **Newer releases** are not the installer's: each repository's later commits go live through the testbed's
-  deployment.
+- **Move to a newer state of the set:** `bmo upgrade --index ~/bmo` moves every repository of the install to its
+  newest release tag, and `bmo upgrade --nightly --index ~/bmo` to the head of every main branch, the day's
+  nightly; each checkout is moved forward, never over changes, and each installed repository is deployed again in
+  the install's order. Pull the index first (`git -C ~/bmo pull --ff-only`). It restarts every service, BMO's
+  agents among them, so run it yourself in a terminal, never from inside BMO.
 
 ## When something fails
 
