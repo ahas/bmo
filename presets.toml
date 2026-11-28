@@ -205,6 +205,37 @@ name = "jake"
 folder = "services/jake"
 url = "https://github.com/ahas/jake.git"
 
+# The basic install a package installs (docs of bmo-testbed, 「Unit artifacts」): the core one person's BMO runs on, the
+# console, the agents, memory, jobs, web reading, reports and vision, every unit of it shipped as an artifact. The
+# chat services and everything else are extensions added after it (`bmo install --add`).
+[preset.basic]
+summary = "The core of one person's BMO: the console, the agents, memory, jobs, web reading, reports and vision."
+clone = []
+units = [
+  "bmo-cli",
+  "bmo-pocket",
+  "bmo-testbed",
+  "bmo-web",
+  "bmo-job",
+  "bmo-brain",
+  "bmo-agency",
+  "bmo-receiver",
+  "bmo-gate",
+  "bmo-persona",
+  "bmo-explorer",
+  "bmo-artifact",
+  "bmo-eye",
+]
+features = []
+
+# Everything public, as the operator's install holds it: the all-in-one install a package offers.
+[preset.all-in-one]
+summary = "Everything public: every unit the set ships, both chat services and the machines' and cards' units."
+extends = "operator"
+clone = []
+units = []
+features = []
+
 # One person and their own BMO: the console, memory, the agents and their tools, web reading, one chat service,
 # and their documents, notes, calendar, files, mail and remote machine. No organisations, no customers' voice,
 # no face and nothing that needs a GPU.
